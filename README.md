@@ -9,12 +9,12 @@ when clicked, will cause a random dog image to display. You'll use the Dog API (
 
 #### 1A) Update your HTML
 
-Lets start by creating a `<button>` and an empty `<img>` in the HTML. 
+Lets start by creating a `<button>` and an empty `<img>` in the HTML.
 
-Make the button look like [a nice Bootstrap button](https://getbootstrap.com/docs/5.0/components/buttons/). 
+Make the button look like [a nice Bootstrap button](https://getbootstrap.com/docs/5.0/components/buttons/).
 
 Additionally, put both your button and image in a Bootstrap "card"
-component. Read the Bootstarp documentation to figure out how to do this: https://getbootstrap.com/docs/5.0/components/card/
+component. Read the Bootstrap documentation to figure out how to do this: https://getbootstrap.com/docs/5.0/components/card/
 
 #### 1B) Handle Button Click
 
@@ -22,8 +22,9 @@ Now, lets make it so that when the button is clicked, a random dog image is disp
 
 To get a random dog image URL, we'll make a GET request to this url: `https://dog.ceo/api/breeds/image/random`. The Dog API will then send us a response which will be
 an object formatted like:
+
 ```
-{ 
+{
   "message": "https:\/\/images.dog.ceo\/breeds\/otterhound\/n02091635_1860.jpg",
   "status": "success"
 }
@@ -32,7 +33,7 @@ an object formatted like:
 We can see that the message field contains the random dog image! Grab that URL, then set
 your image's source to be that URL.
 
-Everytime you click the button, you should see a new random dog image appear!
+Every time you click the button, you should see a new random dog image appear!
 
 ## Part 2 - Weather App
 
@@ -56,6 +57,7 @@ To check the weather in a city, make a GET request to `https://goweather.herokua
 substituting `{city}` with the name of the city you want to check the weather in.
 
 You'll receive a response object that looks like:
+
 ```
 {
     "temperature": "17 °C",
@@ -75,11 +77,26 @@ will store this information.
 
 ## Stretch goals
 
-* Create a third sub-project with an API of your choosing. A large list of public
-APIs is available here: https://github.com/public-apis/public-apis I'd recommend
-using one that requires no authentication. Be warned: many of them are quite complicated
-to use.
+- Create a third sub-project with an API of your choosing. A large list of public
+  APIs is available here: https://github.com/public-apis/public-apis I'd recommend
+  using one that requires no authentication. Be warned: many of them are quite complicated
+  to use.
 
-* For each project, put the content returned from the API in a Bootstrap carousel.
-Everytime the user makes a new API request, add a new slide to the carousel. The user
-should be able to look through the carousel to see the results of all their requests.
+An added requirement for the BootstrAPI project:
+Create a third section of the project with an API of your choosing! You should make at least one request to this API and display the results on your page using JS. This could be displaying a random piece of art from the Met Museum of Art API, showing a random "Cat Fact" from the Cat Facts API, etc.
+The hardest part about this will likely be reading through the API's documentation and figuring out exactly how to use it.
+
+Some recommended starter APIs are listed below:
+Shibe API: https://shibe.online/
+Craft Beer API: https://punkapi.com/documentation/v2
+Crypto Currency API: https://www.coinlore.com/cryptocurrency-data-api
+Dad Joke API: https://icanhazdadjoke.com/api
+Fancy Taco API: https://github.com/evz/tacofancy-api
+
+Also, if you want to try to use an API outside of this list, that's great too! A large list of public APIs can be found here. I'd recommend using one that does not require authentication: https://github.com/public-apis/public-apis (edited)
+
+- For each project, put the content returned from the API in a Bootstrap carousel.
+  Every time the user makes a new API request, add a new slide to the carousel. The user
+  should be able to look through the carousel to see the results of all their requests.
+
+- Change the background of the app based on the weather results. (Hint: simple if statement that modifies the style based on the message response from the API. )
